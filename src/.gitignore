@@ -1,0 +1,15 @@
+*~
+Ankh.*
+*Brail_Generated_Code*
+*.resharper*
+*.swp
+*.pidb
+*.suo
+*.dll
+*.user
+*bin/
+*obj/
+*.Publish.xml
+*Thumbs.db
+Web/log.*
+*.svn

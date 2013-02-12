@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{802F7156-9307-4BA1-B898-51D39CEAB1AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dry.Common</RootNamespace>
+    <AssemblyName>Dry.Common</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ActiveRecord\ARDataBinder.cs" />
+    <Compile Include="ActiveRecord\ARFacility.cs" />
+    <Compile Include="ActiveRecord\ARFetcher.cs" />
+    <Compile Include="ActiveRecord\ARHelper.cs" />
+    <Compile Include="ActiveRecord\IDefaultFixture.cs" />
+    <Compile Include="ActiveRecord\LuceneSearchHelper.cs" />
+    <Compile Include="ActiveRecord\Mapping\Conventions.cs" />
+    <Compile Include="ActiveRecord\Model\BaseDefaultModel.cs" />
+    <Compile Include="ActiveRecord\Model\BaseGuidModel.cs" />
+    <Compile Include="ActiveRecord\Model\BaseHiLoModel.cs" />
+    <Compile Include="ActiveRecord\Model\BaseModel.cs" />
+    <Compile Include="ActiveRecord\Model\TablePrefixAttribute.cs" />
+    <Compile Include="ActiveRecord\NamingStrategy.cs" />
+    <Compile Include="ActiveRecord\NHEventHelper.cs" />
+    <Compile Include="ActiveRecord\NHibernateSearchContributor.cs" />
+    <Compile Include="ActiveRecord\QueryExtensions.cs" />
+    <Compile Include="ActiveRecord\SingleTableHiLoGenerator.cs" />
+    <Compile Include="ActiveRecord\Types\DelimitedList.cs" />
+    <Compile Include="ActiveRecord\Types\JsonUserType.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Binder\TreeBuilder.cs" />
+    <Compile Include="Cache\ICache.cs" />
+    <Compile Include="Cache\MemcachedCache.cs" />
+    <Compile Include="Cache\NullCache.cs" />
+    <Compile Include="Clr.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="Diff.cs" />
+    <Compile Include="DiffMatchPatch.cs" />
+    <Compile Include="FileSizeFormatProvider.cs" />
+    <Compile Include="Handlers\BaseHttpHandler.cs" />
+    <Compile Include="Handlers\StaticFileHandler.cs" />
+    <Compile Include="Installers\ArrayFacilityInstaller.cs" />
+    <Compile Include="Installers\MrInstaller.cs" />
+    <Compile Include="Installers\WindsorInstaller.cs" />
+    <Compile Include="IoC.cs" />
+    <Compile Include="LoggingModule.cs" />
+    <Compile Include="MimeMapping.cs" />
+    <Compile Include="Model\AuditEventListener.cs" />
+    <Compile Include="Model\ComponentPrefixMapping.cs" />
+    <Compile Include="Model\FileInfo.cs" />
+    <Compile Include="Model\HitLog.cs" />
+    <Compile Include="Model\IAuditable.cs" />
+    <Compile Include="Model\ICreateAuditable.cs" />
+    <Compile Include="Model\IModifyAuditable.cs" />
+    <Compile Include="Model\LazyMapping.cs" />
+    <Compile Include="Model\LowercaseMapping.cs" />
+    <Compile Include="Model\Mapping.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Monorail\Application.cs" />
+    <Compile Include="Monorail\ARDataBindAttribute.cs" />
+    <Compile Include="Monorail\ARFetchAttribute.cs" />
+    <Compile Include="Monorail\Components\OutputCachedViewComponent.cs" />
+    <Compile Include="Monorail\Components\PaginationComponent.cs" />
+    <Compile Include="Monorail\Components\SearchViewComponent.cs" />
+    <Compile Include="Monorail\Components\SingleColumnComponent.cs" />
+    <Compile Include="Monorail\Components\ThreeColumnComponent.cs" />
+    <Compile Include="Monorail\Components\TwoColumnComponent.cs" />
+    <Compile Include="Monorail\Controllers\BaseController.cs" />
+    <Compile Include="Monorail\Controllers\InstallController.cs" />
+    <Compile Include="Monorail\Controllers\SpellCheckController.cs" />
+    <Compile Include="Monorail\DynamicActions\ActionAttributes.cs" />
+    <Compile Include="Monorail\DynamicActions\BaseAction.cs" />
+    <Compile Include="Monorail\DynamicActions\CreateAction.cs" />
+    <Compile Include="Monorail\DynamicActions\DeleteAction.cs" />
+    <Compile Include="Monorail\DynamicActions\EditAction.cs" />
+    <Compile Include="Monorail\DynamicActions\GenericListAction.cs" />
+    <Compile Include="Monorail\DynamicActions\Interfaces.cs" />
+    <Compile Include="Monorail\DynamicActions\ListAction.cs" />
+    <Compile Include="Monorail\DynamicActions\LuceneListAction.cs" />
+    <Compile Include="Monorail\DynamicActions\NewAction.cs" />
+    <Compile Include="Monorail\DynamicActions\UpdateAction.cs" />
+    <Compile Include="Monorail\DynamicActions\ViewAction.cs" />
+    <Compile Include="Monorail\Extensions\WebTraceExtension.cs" />
+    <Compile Include="Monorail\FileUpload.cs" />
+    <Compile Include="Monorail\Filters\AdminFilter.cs" />
+    <Compile Include="Monorail\Filters\ConfigurationFilter.cs" />
+    <Compile Include="Monorail\Filters\GZipFilter.cs" />
+    <Compile Include="Monorail\Filters\TracingFilter.cs" />
+    <Compile Include="Monorail\Filters\ViewFilter.cs" />
+    <Compile Include="Monorail\Filters\WhitespaceFilter.cs" />
+    <Compile Include="Monorail\Filters\WhitespaceTransformFilter.cs" />
+    <Compile Include="Monorail\Helpers\DateHelper.cs" />
+    <Compile Include="Monorail\Helpers\LinkHelper.cs" />
+    <Compile Include="Monorail\Helpers\MRHelper.cs" />
+    <Compile Include="Monorail\Helpers\PdfHelper.cs" />
+    <Compile Include="Monorail\Helpers\ScriptHelper.cs" />
+    <Compile Include="Monorail\Routing.cs" />
+    <Compile Include="Monorail\Search\GenericSiteSearch.cs" />
+    <Compile Include="Monorail\Search\ISiteSearch.cs" />
+    <Compile Include="Monorail\TemplateLocation.cs" />
+    <Compile Include="ProducerConsumerQueue.cs" />
+    <Compile Include="Queries\AbstactQuery.cs" />
+    <Compile Include="Queries\CustomPage.cs" />
+    <Compile Include="Queries\GenericNhQuery.cs" />
+    <Compile Include="Queries\IQuery.cs" />
+    <Compile Include="Queries\LazyPage.cs" />
+    <Compile Include="Queries\LuceneNhQuery.cs" />
+    <Compile Include="Queries\NodeExtensions.cs" />
+    <Compile Include="Validators\IsNullOrUniqueValidator.cs" />
+    <Compile Include="Validators\IsUniqueValidator.cs" />
+    <Compile Include="Validators\NullOrNotSameAsValidator.cs" />
+    <Compile Include="Validators\ValidateIsUniqueAttribute.cs" />
+    <Compile Include="Validators\ValidateNullOrNotSameAsAttribute.cs" />
+    <Compile Include="Validators\ValidateNullOrUniqueAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Castle.ActiveRecord">
+      <HintPath>..\libs\Castle.ActiveRecord.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.ActiveRecord.Web">
+      <HintPath>..\libs\Castle.ActiveRecord.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Components.Binder">
+      <HintPath>..\libs\Castle.Components.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Components.Pagination">
+      <HintPath>..\libs\Castle.Components.Pagination.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Components.Validator">
+      <HintPath>..\libs\Castle.Components.Validator.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\libs\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.MonoRail.Framework">
+      <HintPath>..\libs\Castle.MonoRail.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.MonoRail.WindsorExtension">
+      <HintPath>..\libs\Castle.MonoRail.WindsorExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\libs\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Enyim.Caching">
+      <HintPath>..\libs\Enyim.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\libs\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net">
+      <HintPath>..\libs\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\libs\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Search">
+      <HintPath>..\libs\NHibernate.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\libs\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\libs\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>..\libs\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
